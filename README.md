@@ -1,6 +1,10 @@
-# BriuinExperience
+# Experience
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.25.
+ng add single-spa-angular for single-spa
+
+***
+downgrade to "@angular-devkit/build-angular": "=0.803.22" and added "@babel/compat-data": "7.8.0" to fix Could not find plugin "proposal-numeric-separator" issue
 
 ## Development server
 
