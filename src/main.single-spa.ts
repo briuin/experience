@@ -1,13 +1,12 @@
+import { enableProdMode, NgZone } from "@angular/core";
 
-import { enableProdMode, NgZone } from '@angular/core';
-
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { Router } from '@angular/router';
-import { ɵAnimationEngine as AnimationEngine } from '@angular/animations/browser'; 
-import { AppModule } from './app/app.module';
-import { environment } from './environments/environment';
-import singleSpaAngular from 'single-spa-angular';
-import { singleSpaPropsSubject } from './single-spa/single-spa-props';
+import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
+import { Router } from "@angular/router";
+import { ɵAnimationEngine as AnimationEngine } from "@angular/animations/browser";
+import { AppModule } from "./app/app.module";
+import { environment } from "./environments/environment";
+import singleSpaAngular from "single-spa-angular";
+import { singleSpaPropsSubject } from "./single-spa/single-spa-props";
 
 if (environment.production) {
   enableProdMode();
@@ -15,13 +14,17 @@ if (environment.production) {
 
 const lifecycles = singleSpaAngular({
   bootstrapFunction: singleSpaProps => {
-    singleSpaPropsSubject.next(singleSpaProps);
+    const props = {
+      globalEventDistributor: null,
+      ...singleSpaProps
+    };
+    singleSpaPropsSubject.next(props);
     return platformBrowserDynamic().bootstrapModule(AppModule);
   },
-  template: '<briuin-experience-root />',
+  template: "<briuin-experience-root />",
   Router,
-  NgZone: NgZone,
-  AnimationEngine: AnimationEngine,
+  NgZone,
+  AnimationEngine
 });
 
 export const bootstrap = lifecycles.bootstrap;

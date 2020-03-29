@@ -14,6 +14,7 @@
   "private": true,
   "dependencies": {
     "@angular-builders/custom-webpack": "^8",
+    "@angular-redux/store": "^10.0.0",
     "@angular/animations": "~8.2.14",
     "@angular/common": "~8.2.14",
     "@angular/compiler": "~8.2.14",
@@ -22,6 +23,7 @@
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
+    "redux": "4.0.1",
     "rxjs": "~6.4.0",
     "single-spa-angular": "^3.3.0",
     "tslib": "^1.10.0",
@@ -33,9 +35,9 @@
     "@angular/compiler-cli": "~8.2.14",
     "@angular/language-service": "~8.2.14",
     "@babel/compat-data": "7.8.0",
-    "@types/node": "~8.9.4",
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "~8.9.4",
     "codelyzer": "^5.0.0",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
@@ -45,9 +47,12 @@
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.0",
     "protractor": "~5.4.0",
+    "redux-devtools-extension": "^2.13.8",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "typescript": "~3.5.3"
   },
-  "resolutions": { "minimist": "^1.2.3" }
+  "resolutions": {
+    "minimist": "^1.2.3"
+  }
 }
