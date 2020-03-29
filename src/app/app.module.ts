@@ -9,7 +9,7 @@ import { Globals } from "src/global.service";
 
 @NgModule({
   declarations: [AppComponent, EmptyRouteComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, NgReduxModule],
   providers: [],
   bootstrap: [AppComponent]
 })
