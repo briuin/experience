@@ -1,10 +1,10 @@
 # Experience
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.25.
-ng add single-spa-angular for single-spa
+`ng add single-spa-angular` for single-spa
 
 ***
-downgrade to "@angular-devkit/build-angular": "=0.803.22" and added "@babel/compat-data": "7.8.0" to fix Could not find plugin "proposal-numeric-separator" issue
+downgrade to `"@angular-devkit/build-angular": "=0.803.22"` and added `"@babel/compat-data": "7.8.0"` to fix `Could not find plugin "proposal-numeric-separator"` issue
 
 ## Development server
 
@@ -16,7 +16,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `ng build` to build the project. The build artifacts will be stored in the `docs/` directory. Use the `--prod` flag for a production build.
 
 ## Running unit tests
 
